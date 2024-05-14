@@ -5,7 +5,7 @@ import traverse from '@babel/traverse';
 
 const files = glob.sync('../ts-react-app/src/**/*.tsx');
 
-const componentsWithNoUsage = ['Component1', 'Component2'];
+const components = ['Component1', 'Component2'];
 const componentUsagesBag: Record<string, boolean> = {};
 
 files.forEach((file) => {
@@ -19,8 +19,8 @@ files.forEach((file) => {
 
   traverse(ast, {
     JSXIdentifier: (path) => {
-      componentsWithNoUsage.forEach((c) => {
-        componentUsagesBag[c] = path.node.name === c;
+      components.forEach((component) => {
+        componentUsagesBag[component] = path.node.name === component;
       });
     },
   });
