@@ -1,0 +1,21 @@
+{
+  "name": "audit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/parser": "^7.24.5",
+    "@babel/traverse": "^7.24.5",
+    "@types/babel__traverse": "^7.20.5",
+    "glob": "^10.3.15",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
